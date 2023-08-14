@@ -35,7 +35,7 @@ console.log(x.matches)
 if (x.matches == true) {
   $(".flex-container").css("height", "100%");
   $(".flex-container-item2").remove();
-  $(".flex-container-item1").before("<img src='../assets/images/illustration-sign-up-mobile.svg' alt='mobile-image'>")
+  $(".flex-container-item1").before("<img src='../assets/images/illustration-sign-up-mobile.svg' alt='mobile-image'>");
   if ($(".thanks-message").css("visibility") === "visible") {
     
   }
