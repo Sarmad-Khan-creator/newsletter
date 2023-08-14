@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Outfit:wght@700&family=PT+Sans&family=Roboto:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&family=Outfit:wght@700&family=PT+Sans&family=Roboto&display=swap');
+$Dark-Slate-Grey: hsl(234, 29%, 20%);
+$Charcoal-Grey: hsl(235, 18%, 26%);
+$Grey: hsl(231, 7%, 60%);
+$White: hsl(0, 0%, 100%);
+$Tomato: hsl(4, 100%, 67%);
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight:400;
+    background-color: $Charcoal-Grey;
+    color: $Grey;
+    font-size: 16px;
+
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        visibility: visible;
+
+        .flex-container {
+            border-radius: 15px;
+            box-shadow: 10px;
+            background-color: $White;
+            display: flex;
+            gap: 60px;
+            padding: 20px;
+
+            &-item1 {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                padding-block: 40px;
+                margin-left: 20px;
+                max-width: 400px;
+
+                & h1 {
+                    color: $Dark-Slate-Grey;
+                    font-weight: 700;
+                    font-size: 60px;
+                    margin: 0;          
+                }
+
+                & ul {
+                    list-style: none;
+                    margin: 0px;
+                    
+
+                    li  {
+                        margin-left: -40px;
+                        margin-bottom: 10px;
+
+                        img {
+                            margin-right: 20px;
+                        }
+                    }
+                }
+
+                & .email-error {
+                    font-size: 15px;
+                    font-weight: 700;
+
+                    & .email {
+                        color: $Dark-Slate-Grey;
+                        float: left;
+                    }
+
+                    & .error {
+                        color: red;
+                        float: right;
+                        visibility: hidden;
+                    }
+                }
+
+                & #email {
+                    padding: 15px;
+                }
+
+                & .subscribe {
+                    padding: 15px;
+                    border-radius: 7px;
+                    background-color: $Dark-Slate-Grey;
+                    color: $White;
+                    font-weight: 700;
+
+                    &:hover {
+                        background-color: $Tomato;
+                        cursor: pointer;
+                    }
+                }
+
+            }
+        }
+     }
+
+    .thanks-message {
+        position: absolute;
+        top: 25%;
+        left: 40%;
+        max-width: 280px;
+        background-color: $White;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 10px;
+        color: $Dark-Slate-Grey;
+        visibility: hidden;
+
+        & .confirmation {
+            font-size: 13px;
+        }
+
+        & .dismiss {
+            padding: 15px;
+            background-color: $Dark-Slate-Grey;
+            color: $White;
+            width: 100%;
+            font-weight: 700;
+            border-radius: 7px;
+
+            &:hover {
+                background-color: $Tomato;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 675px) {
+
+    body {
+        background-color: white;
+
+        .thanks-message {
+            left: 10%;
+
+            & .dismiss {
+                margin-top: 70px;
+            }
+        }
+    }
+    .main {
+        height: 100vh !important;
+        display: block !important;
+
+        .flex-container {
+            border-radius: 0 !important;
+            flex-direction: column;
+            height: 100%;
+            padding: 0% !important;
+            gap: 20px !important;
+
+            &-item1 {
+                gap: 25px !important;
+                width: 100% !important;
+                margin-left: 10% !important;
+            }
+        }
+    }
+    
+}
